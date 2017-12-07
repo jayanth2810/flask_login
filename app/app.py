@@ -17,8 +17,8 @@ def login_function():
     )
     return response
 
-@app.route('/users/<jwt>', methods = ['GET'])
-def grab_id_function(jwt):
+@app.route('/users/', methods = ['GET'])
+def grab_id_function():
     result = {"data": "1234"}
     response = app.response_class(
         response=json.dumps(result),
